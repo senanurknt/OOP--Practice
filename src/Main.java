@@ -1,35 +1,14 @@
-
-import java.util.Scanner ;
-
 public class Main {
-
     public static void main (String[] args){
-        Notlar notlar = new Notlar();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Vize notunu giriniz " + notlar.vize );
-        notlar.vize = input.nextInt();
-        System.out.println("Final notunu giriniz " + notlar.finall );
-        notlar.finall= input.nextInt();
-        System.out.println("Quiz notunu giriniz " + notlar.quiz );
-        notlar.quiz = input.nextInt();
+        InstaAccount instaAccount = new InstaAccount("Senanur " , "senanurknt ",190 );
+        try {
+            instaAccount.increaseFollowers(50);
+            instaAccount.decreaseFollowers(-20);
 
-        notlar.notHesapla();
-        System.out.println("Öğrencinin ortalaması: " + notlar.ortalama );
-        if (notlar.ortalama < 50 ){
-            System.out.println("Ögrenci dersten kaldı ");
+
+        }catch ( Exception e ){
+            System.out.println(e.getMessage());
         }
-        else {
-            System.out.println("Öğrenci dersten geçti");
-        }
-
-
-
-
-
-
-
-
-
 
 
     }
